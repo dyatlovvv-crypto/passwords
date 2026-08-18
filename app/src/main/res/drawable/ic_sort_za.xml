@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Z→A -->
+    <path
+        android:fillColor="@color/ios_icon"
+        android:pathData="M5.4,6.3h6.1v1.4L7.85,14.8H11.7v1.4H5.4v-1.4l3.65,-7.1H5.4V6.3z" />
+    <path
+        android:fillColor="@color/ios_icon"
+        android:pathData="M14.85,17.7h1.45V9.85l1.85,1.85 1.05,-1.05 -3.55,-3.55 -3.55,3.55 1.05,1.05 1.85,-1.85V17.7z" />
+</vector>

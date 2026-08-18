@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <receiver
+            android:name=".dump.VaultDumpReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ru.srr.passwords.DUMP_VAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

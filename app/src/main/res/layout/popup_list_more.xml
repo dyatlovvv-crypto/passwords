@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_menu_popup"
+    android:elevation="@dimen/elevation_card"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/space_sm">
+
+    <TextView
+        android:id="@+id/rowSelect"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:text="@string/select"
+        android:textColor="@color/ios_text"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+title,url,username,password,notes,otp,kind
+QqqSiteA,https://a.example,usr-a,pa,uitest-marker-srr,,LOGIN
+QqqTotp,https://b.example,usr-b,pb,uitest-marker-srr,otpauth://totp/Qqq:usr-b?secret=JBSWY3DPEHPK3PXP,CODE
+QqqVpnFile,,,,uitest-marker-srr,,CONFIG_VPN
+QqqKey,https://c.example,usr-k,pk,uitest-marker-srr,,PASSKEY

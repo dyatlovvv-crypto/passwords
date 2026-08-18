@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Passwords" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ios_blue</item>
+        <item name="colorPrimaryVariant">@color/ios_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/ios_blue</item>
+        <item name="android:colorBackground">@color/ios_bg</item>
+        <item name="colorAccent">@color/ios_blue</item>
+        <item name="colorControlActivated">@color/ios_blue</item>
+        <item name="colorControlHighlight">@color/ios_fill</item>
+        <item name="android:colorControlActivated">@color/ios_blue</item>
+        <item name="android:textColorPrimary">@color/ios_text</item>
+        <item name="android:textColorSecondary">@color/ios_text_secondary</item>
+        <item name="android:statusBarColor">@color/ios_bg</item>
+        <item name="android:navigationBarColor">@color/ios_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">@color/ios_bg</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="editTextStyle">@style/Passwords.EditText</item>
+        <item name="android:autofilledHighlight">@color/transparent</item>
+    </style>
+
+    <style name="Theme.Passwords.Lock" parent="Theme.Passwords">
+        <item name="android:windowBackground">@color/ios_bg_lock</item>
+        <item name="android:statusBarColor">@color/ios_bg_lock</item>
+    </style>
+
+    <style name="Theme.Passwords.IosAlert" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.42</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Passwords.Dialog" parent="Theme.Passwords">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Passwords.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@drawable/bg_cursor</item>
+        <item name="android:textColor">@color/ios_text</item>
+        <item name="android:textColorHint">@color/ios_text_tertiary</item>
+        <item name="android:importantForAutofill">no</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Passwords.Title" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/ios_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Passwords.TitleLarge" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/ios_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Passwords.BodyMedium" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/ios_text</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Passwords.LabelSmall" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/ios_text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Passwords.CardLabel" parent="Passwords.BodyMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Passwords.ListTitle" parent="Passwords.BodyMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Passwords.ListSubtitle" parent="Passwords.LabelSmall" />
+
+    <style name="Passwords.NavTitle" parent="Passwords.BodyMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Passwords.DetailTitle" parent="Passwords.TitleLarge" />
+
+    <style name="Passwords.Link" parent="Passwords.BodyMedium">
+        <item name="android:textColor">@color/ios_blue</item>
+    </style>
+</resources>

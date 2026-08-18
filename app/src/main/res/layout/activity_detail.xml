@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_xl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/space_md"
+            android:paddingTop="@dimen/space_sm">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/touch_sm"
+                android:layout_height="@dimen/touch_sm"
+                android:background="@drawable/bg_circle_btn"
+                android:contentDescription="@null"
+                android:padding="@dimen/space_sm"
+                android:src="@drawable/ic_back"
+                app:tint="@color/md_on_primary_container" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="@dimen/touch_sm"
+                android:layout_height="@dimen/touch_sm"
+                android:background="@drawable/bg_circle_btn"
+                android:contentDescription="@null"
+                android:padding="@dimen/space_sm"
+                android:src="@drawable/ic_share"
+                app:tint="@color/md_on_primary_container" />
+
+            <TextView
+                android:id="@+id/btnEdit"
+                style="@style/Passwords.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/touch_sm"
+                android:layout_marginStart="@dimen/space_xs"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/space_sm"
+                android:text="@string/edit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_sm"
+            android:background="@drawable/bg_detail_card"
+            android:elevation="@dimen/elevation_card"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_sm">
+
+            <FrameLayout
+                android:layout_width="@dimen/touch_md"
+                android:layout_height="@dimen/touch_md"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_lg"
+                android:background="@drawable/bg_icon_well">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/space_xs"
+                    android:contentDescription="@null" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/Passwords.DetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_sm"
+                android:layout_marginBottom="@dimen/space_md" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/ios_separator" />
+
+            <LinearLayout
+                android:id="@+id/rowUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_md">
+
+                <TextView
+                    android:id="@+id/labelUsername"
+                    style="@style/Passwords.LabelSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/username" />
+
+                <TextView
+                    android:id="@+id/username"
+                    style="@style/Passwords.BodyMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ios_blue" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/sepPasskey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/space_md"
+                android:background="@color/ios_separator"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/rowPasskey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_md"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Passwords.LabelSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/passkey" />
+
+                <TextView
+                    android:id="@+id/passkeyValue"
+                    style="@style/Passwords.BodyMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <LinearLayout
+                android:id="@+id/rowPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_md">
+
+                <TextView
+                    android:id="@+id/labelPassword"
+                    style="@style/Passwords.LabelSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/password" />
+
+                <TextView
+                    android:id="@+id/password"
+                    style="@style/Passwords.BodyMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/sepWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/space_md"
+                android:background="@color/ios_separator" />
+
+            <LinearLayout
+                android:id="@+id/rowWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_md">
+
+                <TextView
+                    style="@style/Passwords.LabelSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/website" />
+
+                <TextView
+                    android:id="@+id/website"
+                    style="@style/Passwords.BodyMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/sepAfterWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/space_md"
+                android:background="@color/ios_separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/space_md">
+
+                <TextView
+                    style="@style/Passwords.LabelSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/changed" />
+
+                <TextView
+                    android:id="@+id/changed"
+                    style="@style/Passwords.LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <TextView
+                android:id="@+id/notes"
+                style="@style/Passwords.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/row_height"
+                android:paddingHorizontal="@dimen/space_md"
+                android:paddingVertical="@dimen/space_md"
+                android:text="@string/notes"
+                android:textColor="@color/ios_text_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/securityCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_md"
+            android:background="@drawable/bg_detail_card"
+            android:elevation="@dimen/elevation_card"
+            android:orientation="vertical"
+            android:padding="@dimen/space_md"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/securityTitle"
+                style="@style/Passwords.TitleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/reused_password" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/icon_well"
+                    android:layout_height="@dimen/icon_well"
+                    android:background="@drawable/bg_icon_well">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_glyph"
+                        android:layout_height="@dimen/icon_glyph"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_warn_yellow" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/securityHint"
+                    style="@style/Passwords.LabelSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnChangePassword"
+                style="@style/Passwords.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/change_password" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

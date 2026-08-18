@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="@dimen/space_md">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/touch_sm"
+            android:layout_height="@dimen/touch_sm"
+            android:background="@drawable/bg_circle_btn"
+            android:contentDescription="@null"
+            android:padding="@dimen/space_sm"
+            android:src="@drawable/ic_back"
+            app:tint="@color/md_on_primary_container" />
+
+        <TextView
+            style="@style/Passwords.NavTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/menu_generated" />
+
+        <View
+            android:layout_width="@dimen/touch_sm"
+            android:layout_height="@dimen/touch_sm" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/generatedValue"
+        style="@style/Passwords.TitleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_lg"
+        android:background="@drawable/bg_detail_card"
+        android:elevation="@dimen/elevation_card"
+        android:gravity="center"
+        android:padding="@dimen/space_md"
+        android:textColor="@color/ios_blue"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:id="@+id/btnGenerate"
+        style="@style/Passwords.BodyMedium"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height"
+        android:layout_marginTop="@dimen/space_md"
+        android:background="@drawable/bg_unlock_pill"
+        android:elevation="@dimen/elevation_fab"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Сгенерировать ещё"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/btnCopy"
+        style="@style/Passwords.BodyMedium"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height"
+        android:layout_marginTop="@dimen/space_sm"
+        android:background="@drawable/bg_detail_card"
+        android:elevation="@dimen/elevation_card"
+        android:gravity="center"
+        android:text="Скопировать" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_md"
+        android:layout_weight="1" />
+</LinearLayout>

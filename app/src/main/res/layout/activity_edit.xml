@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_md">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnCancel"
+                style="@style/Passwords.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/header"
+                style="@style/Passwords.NavTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/new_password" />
+
+            <TextView
+                android:id="@+id/btnSave"
+                style="@style/Passwords.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/save" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:background="@drawable/bg_detail_card"
+            android:elevation="@dimen/elevation_card"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/inputTitle"
+                style="@style/Passwords.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:hint="Название"
+                android:paddingHorizontal="@dimen/space_md" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <EditText
+                android:id="@+id/inputUsername"
+                style="@style/Passwords.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:autofillHints="username,emailAddress"
+                android:hint="@string/username"
+                android:importantForAutofill="yes"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/space_md" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <EditText
+                android:id="@+id/inputPassword"
+                style="@style/Passwords.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:autofillHints="password"
+                android:hint="@string/password"
+                android:importantForAutofill="yes"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/space_md" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <EditText
+                android:id="@+id/inputUrl"
+                style="@style/Passwords.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:autofillHints="postalAddress"
+                android:hint="@string/website"
+                android:importantForAutofill="yes"
+                android:inputType="textUri"
+                android:paddingHorizontal="@dimen/space_md" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <EditText
+                android:id="@+id/inputAppPackage"
+                style="@style/Passwords.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:hint="@string/app_package_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/space_md" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <EditText
+                android:id="@+id/inputNotes"
+                style="@style/Passwords.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:gravity="top"
+                android:hint="@string/notes"
+                android:padding="@dimen/space_md" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="@dimen/space_md" android:background="@color/ios_separator" />
+
+            <Spinner
+                android:id="@+id/kindSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:paddingHorizontal="@dimen/space_sm" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnDelete"
+            style="@style/Passwords.BodyMedium"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:layout_marginTop="@dimen/space_lg"
+            android:background="@drawable/bg_detail_card"
+            android:elevation="@dimen/elevation_card"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/ios_red"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

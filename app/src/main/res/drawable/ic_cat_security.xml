@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- exclamationmark.circle.fill style glyph for colored badge -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,3.2c-4.85,0 -8.8,3.95 -8.8,8.8s3.95,8.8 8.8,8.8 8.8,-3.95 8.8,-8.8 -3.95,-8.8 -8.8,-8.8zM11.15,7.1h1.7v6.2h-1.7zM11.15,15.05h1.7v1.7h-1.7z" />
+</vector>

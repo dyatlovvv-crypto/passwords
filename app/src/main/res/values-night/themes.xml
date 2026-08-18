@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Passwords" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ios_blue</item>
+        <item name="colorPrimaryVariant">@color/ios_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/ios_blue</item>
+        <item name="android:colorBackground">@color/ios_bg</item>
+        <item name="colorAccent">@color/ios_blue</item>
+        <item name="colorControlActivated">@color/ios_blue</item>
+        <item name="colorControlHighlight">@color/ios_fill</item>
+        <item name="android:colorControlActivated">@color/ios_blue</item>
+        <item name="android:textColorPrimary">@color/ios_text</item>
+        <item name="android:textColorSecondary">@color/ios_text_secondary</item>
+        <item name="android:statusBarColor">@color/ios_bg</item>
+        <item name="android:navigationBarColor">@color/ios_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowBackground">@color/ios_bg</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="editTextStyle">@style/Passwords.EditText</item>
+        <item name="android:autofilledHighlight">@color/transparent</item>
+    </style>
+
+    <style name="Theme.Passwords.Lock" parent="Theme.Passwords">
+        <item name="android:windowBackground">@color/ios_bg_lock</item>
+        <item name="android:statusBarColor">@color/ios_bg_lock</item>
+    </style>
+</resources>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_bg"
+    android:fitsSystemWindows="true">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/touch_sm"
+        android:layout_height="@dimen/touch_sm"
+        android:layout_marginStart="@dimen/space_md"
+        android:layout_marginTop="@dimen/space_sm"
+        android:background="@drawable/bg_circle_btn"
+        android:contentDescription="@null"
+        android:padding="@dimen/space_sm"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/md_on_primary_container" />
+
+    <LinearLayout
+        android:id="@+id/headerTexts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintEnd_toStartOf="@id/headerEndBarrier"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Passwords.NavTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            style="@style/Passwords.LabelSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/headerEndBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="btnMore,btnDone" />
+
+    <ImageButton
+        android:id="@+id/btnMore"
+        android:layout_width="@dimen/touch_sm"
+        android:layout_height="@dimen/touch_sm"
+        android:layout_marginEnd="@dimen/space_md"
+        android:background="@drawable/bg_circle_btn"
+        android:contentDescription="@string/select"
+        android:padding="@dimen/space_sm"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        app:tint="@color/md_on_primary_container" />
+
+    <TextView
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/touch_sm"
+        android:layout_marginEnd="@dimen/space_md"
+        android:background="@drawable/bg_pill_btn"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/space_md"
+        android:text="@string/done"
+        android:textColor="@color/ios_text"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="@dimen/space_md"
+        android:paddingTop="@dimen/space_sm"
+        android:paddingBottom="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <TextView
+        android:id="@+id/empty"
+        style="@style/Passwords.BodyMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/space_xl"
+        android:text="@string/no_items"
+        android:textColor="@color/ios_text_secondary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/touch_md"
+        android:layout_marginHorizontal="@dimen/space_md"
+        android:layout_marginBottom="@dimen/space_md"
+        android:background="@drawable/bg_bottom_bar"
+        android:elevation="@dimen/elevation_card"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/space_xs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnSort"
+            android:layout_width="@dimen/touch_sm"
+            android:layout_height="@dimen/touch_sm"
+            android:background="@drawable/bg_bar_btn"
+            android:backgroundTint="@null"
+            android:contentDescription="@string/sort_az"
+            android:padding="@dimen/space_sm"
+            android:src="@drawable/ic_sort_az"
+            app:backgroundTint="@null"
+            app:tint="@color/ios_icon" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/touch_sm"
+            android:layout_marginHorizontal="@dimen/space_sm"
+            android:layout_weight="1"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/space_sm">
+
+            <ImageView
+                android:layout_width="@dimen/icon_glyph"
+                android:layout_height="@dimen/icon_glyph"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_search"
+                app:tint="@color/ios_text_tertiary" />
+
+            <EditText
+                android:id="@+id/searchField"
+                style="@style/Passwords.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="@dimen/space_sm"
+                android:textColor="@color/ios_text"
+                android:textColorHint="@color/ios_text_tertiary"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="@dimen/touch_sm"
+            android:layout_height="@dimen/touch_sm"
+            android:background="@drawable/bg_fab_primary"
+            android:backgroundTint="@null"
+            android:contentDescription="@null"
+            android:elevation="@dimen/elevation_fab"
+            android:padding="@dimen/space_sm"
+            android:src="@drawable/ic_plus"
+            app:backgroundTint="@null"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/btnExportSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_sm"
+            android:layout_marginEnd="@dimen/space_sm"
+            android:background="@drawable/bg_pill_btn"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/space_md"
+            android:textColor="@color/ios_blue"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnDeleteSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/touch_sm"
+            android:background="@drawable/bg_pill_btn"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/space_md"
+            android:textColor="@color/ios_red"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
